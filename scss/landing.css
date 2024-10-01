@@ -123,10 +123,12 @@ a {
   position: relative;
   bottom: 0.25rem;
   right: 0.25rem;
+  transition: 0.3s ease-in-out;
 }
-.button__frame:active {
+.button__frame:hover {
   bottom: 0;
   right: 0;
+  background-color: #47899b;
 }
 .button__text {
   color: #fff;

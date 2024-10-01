@@ -1,7 +1,9 @@
+@use "./partials/variables.scss" as *;
+@use "./partials/mixins" as *;
 @use "./partials/global.scss" as *;
 
 .hero {
-  background-color: #fff0ed;
+  background-color: $primary;
   text-align: center;
   padding: 2.5rem 0;
 
@@ -21,32 +23,32 @@
 .button {
   position: relative;
   margin: 1.25rem 0;
-  background-color: #5bacc3;
+  background-color: $primary-highlight;
   width: 11rem;
 
   &__frame {
     width: 11rem;
     height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #393939;
+    @include flex-center;
+    border: 2px solid $neutral-dark;
     position: relative;
     bottom: 0.25rem;
     right: 0.25rem;
+    transition: 0.3s ease-in-out;
 
-    &:active {
+    &:hover {
       bottom: 0;
       right: 0;
+      background-color: #47899b;
     }
   }
   &__text {
-    color: #fff;
+    color: $neutral-white;
   }
 }
 
 .products {
-  background-color: #f7f7f7;
+  background-color: $neutral-light;
   padding: 3.75rem 0;
   &__title {
     text-align: center;
@@ -69,21 +71,19 @@
   height: 27.5rem;
   border-radius: 10px;
   box-shadow: 0 5px 9px -1px rgba(0, 0, 0, 0.25);
-  background-color: #fff;
+  background-color: $neutral-white;
   display: flex;
   flex-direction: column;
   &__image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     height: 65%;
   }
   &__image {
-    height: 17.5rem;
+    height: $image-height;
     padding: 1.25rem 0;
   }
   &__bottom {
-    background-color: #fff0ed;
+    background-color: $primary;
     width: 100%;
     padding: 1rem;
     display: flex;
@@ -130,7 +130,7 @@
     width: 50px;
   }
   &__image-frame {
-    border: 5px solid #5bacc3;
+    border: 5px solid $primary-highlight;
     position: relative;
     bottom: 1.25rem;
     right: 1.25rem;
@@ -159,7 +159,7 @@
     height: 25rem;
   }
   &__image {
-    height: 17.5rem;
+    height: $image-height;
     z-index: 1;
   }
   &__image-background {
@@ -174,9 +174,9 @@
   margin: 12.5rem auto;
 
   &__info {
-    background-color: #393939;
+    background-color: $neutral-dark;
     padding: 2.5rem 0;
-    color: #fff;
+    color: $neutral-white;
     font-size: 2.8125rem;
     text-align: center;
   }
@@ -186,7 +186,7 @@
 }
 
 .footer {
-  background-color: #fff0ed;
+  background-color: $primary;
   padding: 5rem 10rem;
   display: flex;
   justify-content: space-between;
@@ -214,5 +214,5 @@
   font-weight: 700;
 }
 .social__logo {
-  width: 3.125rem;
+  width: $icon-width;
 }

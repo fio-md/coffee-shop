@@ -1,3 +1,5 @@
+@use "./variables.scss" as *;
+
 *,
 *::before,
 *::after {
@@ -9,7 +11,7 @@ body {
   margin: 0;
 }
 .header {
-  background-color: #fff0ed;
+  background-color: $primary;
   padding: 1.25rem;
   display: flex;
   justify-content: space-between;
@@ -33,7 +35,7 @@ body {
   text-decoration: none;
 }
 .header-nav__link--active {
-  color: #5bacc3;
+  color: $primary-highlight;
 }
 .header__logo {
   width: 3.125rem;
