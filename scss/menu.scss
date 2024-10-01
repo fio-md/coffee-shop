@@ -1,0 +1,83 @@
+@use "./partials/global.scss" as *;
+
+.hero {
+  background-image: url("../assets/images/coffee-circle.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 43.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero__title-box {
+  background-color: #393939;
+  height: 12.5rem;
+  width: 18.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero__title-frame {
+  height: 12.5rem;
+  width: 18.75rem;
+  border: 5px solid #5bacc3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -0.625rem;
+  left: -0.625rem;
+}
+.hero__title {
+  color: #fff;
+  margin: 0;
+}
+.page-nav {
+  background-color: #393939;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+.page-nav__list {
+  padding: 1rem 0;
+}
+.page-nav__link {
+  text-decoration: none;
+}
+.page-nav__item {
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 4px solid #5bacc3;
+}
+.product-type {
+  background-color: #fff0ed;
+  padding: 1rem 0;
+}
+.product-type__title,
+.product-type__product {
+  text-align: center;
+}
+.product-type__container {
+  padding-bottom: 1.25rem;
+}
+.product-type__product {
+  margin-bottom: 1.25rem;
+}
+.product-type__title {
+  margin-bottom: 2rem;
+}
+.product-type__description {
+  text-align: center;
+  width: 25rem;
+  margin: 0 auto;
+  font-style: italic;
+}
+.product-type__price {
+  display: block;
+  text-align: center;
+  color: #5bacc3;
+  margin-top: 0.5rem;
+}
+.product-type.product-type--gray {
+  background-color: #f7f7f7;
+}
