@@ -10,7 +10,8 @@
 body {
   font-family: "Open Sans";
   font-weight: 400;
-  margin: 0;
+  max-width: 2000px;
+  margin: 0 auto;
 }
 ul,
 li {
@@ -59,28 +60,39 @@ a {
   align-items: center;
   position: fixed;
   width: 100%;
+  max-width: 2000px;
   z-index: 4;
+
+  &__home {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__title {
+    font-size: 2.65rem;
+    margin-bottom: 0;
+  }
+  &__logo {
+    width: 3.125rem;
+  }
 }
-.header__home {
-  display: flex;
-  align-items: flex-end;
-  gap: 0.5rem;
-}
-.header__title {
-  font-size: 3rem;
-  margin-bottom: 0;
-}
-.header-nav__list {
-  padding-left: 2.5rem;
-  display: flex;
-  gap: 1rem;
-}
-.header-nav__link {
-  text-decoration: none;
-}
-.header-nav__link--active {
-  color: $primary-highlight;
-}
-.header__logo {
-  width: 3.125rem;
+.header-nav {
+  &__list {
+    padding-left: 2.5rem;
+    display: flex;
+    gap: 1rem;
+  }
+  &__link {
+    text-decoration: none;
+    transition: 1s;
+    &:hover {
+      border-bottom: 1px solid $primary-highlight;
+    }
+  }
+  &__link--active {
+    color: $primary-highlight;
+  }
 }

@@ -26,7 +26,7 @@
 }
 .button {
   position: relative;
-  margin: 1.25rem 0;
+  margin: 2rem 0;
   background-color: $primary-highlight;
   width: 11rem;
 
@@ -43,6 +43,7 @@
     &:hover {
       bottom: 0;
       right: 0;
+      cursor: pointer;
       background-color: #47899b;
     }
   }
@@ -129,7 +130,7 @@
   }
   &__icons {
     display: flex;
-    justify-content: space-between;
+    gap: 4rem;
     margin: 2.5rem 0;
   }
   &__icon {
@@ -175,15 +176,15 @@
 }
 
 .discount {
-  width: 90%;
-  padding: 0 2.5rem;
-  margin: 12.5rem auto;
+  width: 100%;
+  height: 20rem;
+  @include flex-center;
 
   &__info {
     background-color: $neutral-dark;
     padding: 2.5rem;
     color: $neutral-white;
-    font-size: 2.8125rem;
+    font-size: $discount-font-size;
     text-align: center;
   }
   &__code {
