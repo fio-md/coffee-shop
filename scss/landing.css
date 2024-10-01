@@ -10,12 +10,54 @@ body {
   margin: 0;
 }
 
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  margin-bottom: 2.5rem;
+}
+
+h1,
+h2 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
 .header {
   background-color: #fff0ed;
-  padding: 1.25rem;
+  padding: 0 1.25rem;
+  height: 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 4;
 }
 
 .header__home {
@@ -47,52 +89,11 @@ body {
   width: 3.125rem;
 }
 
-ul,
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  margin-bottom: 2.5rem;
-}
-
-h1,
-h2 {
-  font-size: 3.75rem;
-  font-weight: 300;
-}
-
-h3 {
-  font-size: 2.0625rem;
-  font-weight: 300;
-}
-
-p {
-  font-size: 1.125rem;
-  margin: 0;
-}
-
-a {
-  font-size: 1.3125rem;
-}
-
 .hero {
   background-color: #fff0ed;
   text-align: center;
   padding: 2.5rem 0;
+  padding-top: 10.5rem;
 }
 .hero__info {
   display: inline-block;
@@ -105,6 +106,9 @@ a {
   vertical-align: middle;
   display: inline-block;
   text-align: end;
+}
+.hero__image {
+  height: 21.875rem;
 }
 
 .button {
@@ -146,6 +150,7 @@ a {
   display: flex;
   justify-content: center;
   gap: 3rem;
+  flex-wrap: wrap;
 }
 .products__button-container {
   display: flex;
@@ -154,32 +159,33 @@ a {
 }
 
 .product {
-  width: 20.625rem;
+  width: 18rem;
   height: 27.5rem;
   border-radius: 10px;
   box-shadow: 0 5px 9px -1px rgba(0, 0, 0, 0.25);
   background-color: #fff;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 .product__image-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 65%;
+  flex-grow: 1;
 }
 .product__image {
-  height: 17.5rem;
+  height: 17rem;
   padding: 1.25rem 0;
 }
 .product__bottom {
   background-color: #fff0ed;
   width: 100%;
-  padding: 1rem;
+  padding: 0 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 35%;
+  height: 9rem;
 }
 .product__name {
   margin: 0;
@@ -190,7 +196,7 @@ a {
 }
 .product__price {
   color: #5bacc3;
-  font-size: 2.0625rem;
+  font-size: 1.85rem;
   font-weight: 800;
 }
 
@@ -246,7 +252,7 @@ a {
   height: 25rem;
 }
 .about__image {
-  height: 17.5rem;
+  height: 17rem;
   z-index: 1;
 }
 .about__image-background {
@@ -261,7 +267,7 @@ a {
 }
 .discount__info {
   background-color: #393939;
-  padding: 2.5rem 0;
+  padding: 2.5rem;
   color: #fff;
   font-size: 2.8125rem;
   text-align: center;
@@ -275,6 +281,8 @@ a {
   padding: 5rem 10rem;
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
   position: relative;
   overflow: hidden;
 }
